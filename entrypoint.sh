@@ -24,7 +24,7 @@ fi
 
 if [ $? -eq 1 ]
 then
-  GITLEAKS_RESULT=$(echo -e "\e[31m🛑 STOP! Gitleaks encountered leaks")
+  GITLEAKS_RESULT=$(echo -e "\e🛑 STOP! Gitleaks encountered leaks")
   echo "$GITLEAKS_RESULT"
   echo "::set-output name=exitcode::$GITLEAKS_RESULT"
   echo "----------------------------------"
@@ -33,7 +33,7 @@ then
   echo "----------------------------------"
   exit 1
 else
-  GITLEAKS_RESULT=$(echo -e "\e[32m✅ SUCCESS! Your code is good to go!")
+  GITLEAKS_RESULT=$(echo -e "\e✅ SUCCESS! Your code is good to go!")
   echo "$GITLEAKS_RESULT"
   echo "::set-output name=exitcode::$GITLEAKS_RESULT"
   echo "------------------------------------"
